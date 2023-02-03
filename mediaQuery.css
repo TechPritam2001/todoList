@@ -1,0 +1,42 @@
+@media screen and  (max-width: 900px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media screen and  (max-width: 600px) {
+    html {
+        font-size: 45%;
+    }
+
+    #search_form {
+        width: 200px;
+        padding: 3px 7px 3px 2px;
+    }
+
+    #search {
+        padding: 4px 0px 4px 5px;
+    }
+
+    ::placeholder {
+        font-size: 11px;
+    }
+
+    .left {
+        width: 20rem;
+    }
+
+    .right {
+        width: calc(100vw - 20rem);
+    }
+
+    .createTodo, .deleteTodo {
+        width: 15rem;
+        height: 15rem;
+        font-size: 1.5rem;
+    }
+
+    .fa-plus, .fa-trash-can {
+        font-size: 3rem;
+    }
+}

@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.navbar {
+    height: 50px;
+    background-color: #047CFC;
+    box-shadow: 0rem .3rem 1rem rgba(41, 40, 40, 0.514);
+    display: flex;
+    padding: 0rem 5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#search {
+    border: none;
+    outline: none;
+    width: 90%;
+    height: inherit;
+    padding: 5px 0px 5px 10px;
+    border-radius: 30px 0px 0px 30px;
+}
+
+#search_form {
+    background-color: white;
+    width: 250px;
+    padding: 5px 10px 5px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 3rem;
+}
+
+.fa-solid {
+    color: #047CFC;
+}
+
+.heading h3 {
+    font-size: 27px;
+    text-shadow: .3rem .3rem .5rem rgba(10, 10, 10, 0.589);
+}
+
+.todoContainer {
+    height: calc(100vh - 5rem);
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    width: 30rem;
+    height: inherit;
+    background-color: #ccc;
+    padding: 3rem;
+    box-shadow: .3rem 0rem .5rem rgba(78, 77, 77, 0.719);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.createTodo,
+.deleteTodo,
+.todoBox {
+    width: 21rem;
+    height: 21rem;
+    background-color: white;
+    border-radius: 3rem;
+    box-shadow: 0rem 0rem 1rem rgba(151, 145, 145, 0.589);
+}
+
+.createTodo,
+.deleteTodo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(105deg, rgb(233, 169, 132), rgb(178, 187, 236));
+}
+
+.deleteTodo {
+    background-image: linear-gradient(105deg, rgb(233, 146, 146), rgb(245, 165, 137));
+    color: red;
+    font-weight: 400;
+}
+
+.fa-trash-can {
+    font-size: 3rem;
+}
+
+.fa-trash-can:active {
+    transform: translateY(-.2rem);
+    transition: transform .2s;
+}
+
+.deleteTodo:hover .fa-trash-can {
+    animation: animate-trash-can .5s ease;
+}
+
+@keyframes animate-trash-can {
+    0% {transform: translateX(-.3rem);}
+    10% {transform: translateX(.3rem);}
+    20% {transform: translateX(-.3rem);}
+    30% {transform: translateX(.3rem);}
+    40% {transform: translateX(-.3rem);}
+    50% {transform: translateX(.3rem);}
+    60% {transform: translateX(-.3rem);}
+    70% {transform: translateX(.3rem);}
+    80% {transform: translateX(-.3rem);}
+    90% {transform: translateX(.3rem);}
+    100% {transform: translateX(-.3rem);}
+}
+
+.fa-plus + p {
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+}
+
+.createTodo:hover .fa-plus {
+    transform: rotate(180deg);
+}
+
+.fa-plus {
+    font-size: 5rem;
+    font-weight: 100;
+    transition: transform .3s;
+}
+
+.inputTodo, .reEditionTodo {
+    width: 30rem;
+    background-color: #70B3E6;
+    position: fixed;
+    top: 50%;
+    left: 60%;
+    transform: translate(-60%, -50%);
+    border-radius: .5rem;
+    box-shadow: 0 0 1rem rgba(126, 121, 121, 0.486);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: .5rem;
+    z-index: 100;
+}
+
+.title, .description {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+
+.titleHeading, .tCont {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    align-items: center;
+}
+
+#titleContainer, #descContainer, #reDes, #reTitle {
+    border: 1px solid blue;
+    outline: none;
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+
+.createTodoBtn, .saveEditBtn {
+    padding: .5rem 0rem;
+    outline: none;
+}
+
+.fa-xmark {
+    color: black;
+}
+
+.fa-xmark:hover {
+    color: red;
+}
+
+#popupMsg {
+    display: none;
+}
+
+#popupMsg.showpopUp {
+    padding: 1.5rem 2rem;
+    background-color: #246324;
+    width: calc(100vw - 30rem);
+    color: white;
+    display: block;
+}
+
+#popupMsg.showpopUpMsg {
+    padding: 1.5rem 2rem;
+    background-color: #246324;
+    width: calc(100vw - 30rem);
+    color: white;
+    display: block;
+}
+
+.right {
+    width: calc(100vw - 30rem);
+    background-color: rgba(205, 214, 219, 0.664);
+    position: relative;
+}
+
+.todo-section {
+    height: calc(100vh - 10rem);
+    padding: 2rem;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+    gap: 2rem;
+}
+
+.todoBox {
+    padding: 1rem;
+    overflow-y: scroll;
+    position: relative;
+    background-image: linear-gradient(105deg, rgb(162, 230, 116), rgb(145, 233, 236));
+}
+
+.todoDes {
+    margin-top: .5rem;
+    font-weight: 300;
+}
+
+.TDcontainer {
+    position: absolute;
+    left: 0rem;
+    bottom: 0rem;
+    display: flex;
+    justify-content: space-between;
+    width: inherit;
+    padding: 1rem 1rem;
+    align-items: center;
+}
+
+.time, .DRcontainer {
+    font-weight: 300;
+}
+
+.fa-pen {
+    margin-right: 1rem;
+    transition: transform .1s;
+}
+
+.fa-pen:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.fa-trash {
+    color: red;
+    transition: transform .1s;
+}
+
+.fa-trash:hover {
+    transform: scale(1.1, 1.1);
+    animation: animate-trash-can .1s ease-in-out;
+}
+

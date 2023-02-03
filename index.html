@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo list</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaQuery.css">
+    <script src="https://kit.fontawesome.com/d2df290f99.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="heading">
+            <h3>TodoList</h3>
+        </div>
+        <form action="#" id="search_form">
+            <input type="text" name="search_bar" id="search" placeholder="Search your todo using title">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </form>
+    </nav>
+    <div class="todoContainer">
+        <div class="left">
+            <div class="createTodo" title="click on plus and create a new todo">
+                <i class="fa-solid fa-plus"></i>
+                <p>Create New Todo</p>
+            </div>
+            <div class="deleteTodo" title="Delete all todos">
+                <i class="fa-regular fa-trash-can"></i>
+                <p>Delete All</p>
+            </div>
+        </div>
+        <div class="right">
+            <div class="showMsg">
+                <p id="popupMsg"></p>
+            </div>
+            <div class="todo-section">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
